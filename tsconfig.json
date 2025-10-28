@@ -1,0 +1,28 @@
+{
+	"compilerOptions": {
+		"esModuleInterop": true,
+		"allowSyntheticDefaultImports": true,
+		"skipLibCheck": true,
+		"target": "ES2022",
+		"allowJs": true,
+		"resolveJsonModule": true,
+		"moduleDetection": "force",
+		"isolatedModules": true,
+		"module": "ESNext",
+		"moduleResolution": "Bundler",
+		"baseUrl": ".",
+		"rootDir": ".",
+		"paths": {
+			"@/*": ["src/*"]
+		},
+		"outDir": "dist",
+		"forceConsistentCasingInFileNames": true,
+		"strict": false,
+		"noPropertyAccessFromIndexSignature": false,
+		"typeRoots": ["./node_modules/@types", "./@types"],
+		"types": ["node"],
+		"sourceMap": true
+	},
+	"include": ["src/**/*.ts", "@types/**/*.ts", "drizzle.config.ts"],
+	"exclude": ["node_modules", "dist"]
+}
