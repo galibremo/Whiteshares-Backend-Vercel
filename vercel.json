@@ -4,14 +4,15 @@
 	"installCommand": "corepack enable && pnpm install",
 	"builds": [
 		{
-			"src": "dist/server.js",
+			"src": "dist/vercel-server.js",
 			"use": "@vercel/node"
 		}
 	],
 	"routes": [
 		{
 			"src": "/(.*)",
-			"dest": "dist/server.js"
+			"dest": "dist/vercel-server.js"
 		}
-	]
+	],
+	"outputDirectory": "dist"
 }
