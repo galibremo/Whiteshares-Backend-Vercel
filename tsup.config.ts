@@ -4,7 +4,7 @@ export default defineConfig([
 	// Main application bundle (optimized)
 	{
 		entry: ["./src/server.ts"],
-		format: ["cjs"],
+		format: ["esm"],
 		target: "es2022",
 		splitting: true,
 		sourcemap: false,
@@ -13,7 +13,7 @@ export default defineConfig([
 		minify: true,
 		treeshake: true,
 		outDir: "dist",
-		outExtension: () => ({ js: ".js" }),
+		outExtension: () => ({ js: ".mjs" }),
 		define: { "process.env.NODE_ENV": "'production'" },
 		external: ["sharp"],
 		esbuildOptions(options) {
@@ -23,14 +23,14 @@ export default defineConfig([
 	// Drizzle config (separate)
 	{
 		entry: ["drizzle.config.ts"],
-		format: ["cjs"],
+		format: ["esm"],
 		target: "es2022",
 		splitting: false,
 		sourcemap: false,
 		clean: false,
 		bundle: false,
 		outDir: "dist",
-		outExtension: () => ({ js: ".js" }),
+		outExtension: () => ({ js: ".mjs" }),
 		external: ["sharp"]
 	}
 ]);

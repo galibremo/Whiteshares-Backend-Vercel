@@ -22,7 +22,7 @@
 		"typeRoots": ["./node_modules/@types", "types"],
 		"sourceMap": true,
 		"preserveValueImports": false,
-		"verbatimModuleSyntax": false
+		"verbatimModuleSyntax": true
 	},
 	"include": ["**/*.ts", "types/express", "build.js"],
 	"exclude": ["node_modules"]
