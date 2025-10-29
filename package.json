@@ -2,8 +2,7 @@
 	"name": "whiteshare",
 	"version": "1.0.0",
 	"description": "A comprehensive real estate investment platform API enabling fractional property ownership, automated dividend distribution, digital wallet management, and secure payment processing through Plaid and PayPal integrations.",
-	"main": "server.js",
-	"type": "module",
+	"main": "node dist/server.js",
 	"scripts": {
 		"prebuild": "node update‑schema.mjs",
 		"predev": "node update‑schema.mjs",
@@ -16,7 +15,7 @@
 		"build": "rimraf dist && tsup",
 		"build:check": "tsc --noEmit && rimraf dist && tsup",
 		"dev": "nodemon",
-		"start": "node dist/src/server.js",
+		"start": "node dist/server.js",
 		"format": "prettier --write .",
 		"type-check": "tsc --noEmit",
 		"db:studio": "drizzle-kit studio",

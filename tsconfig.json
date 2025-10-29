@@ -17,12 +17,13 @@
 		},
 		"outDir": "dist",
 		"forceConsistentCasingInFileNames": true,
-		"strict": false,
+		"strict": true,
 		"noPropertyAccessFromIndexSignature": false,
-		"typeRoots": ["./node_modules/@types", "./@types"],
-		"types": ["node"],
-		"sourceMap": true
+		"typeRoots": ["./node_modules/@types", "types"],
+		"sourceMap": true,
+		"preserveValueImports": false,
+		"verbatimModuleSyntax": false
 	},
-	"include": ["src/**/*.ts", "@types/**/*.ts", "drizzle.config.ts"],
-	"exclude": ["node_modules", "dist"]
+	"include": ["**/*.ts", "types/express", "build.js"],
+	"exclude": ["node_modules"]
 }

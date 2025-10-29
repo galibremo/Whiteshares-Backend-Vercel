@@ -1,0 +1,17 @@
+{
+	"version": 2,
+	"buildCommand": "corepack enable && pnpm install && pnpm run build",
+	"installCommand": "corepack enable && pnpm install",
+	"builds": [
+		{
+			"src": "dist/server.js",
+			"use": "@vercel/node"
+		}
+	],
+	"routes": [
+		{
+			"src": "/(.*)",
+			"dest": "dist/server.js"
+		}
+	]
+}
